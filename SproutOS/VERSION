@@ -1,0 +1,23 @@
+SproutOS — Sprout BIOS/UEFI 双启版
+====================================
+
+系统名称   : SproutOS（嫩芽操作系统）
+版本号     : 1.0
+发布代号   : Sprout BIOS/UEFI双启版
+发布形态   : 2026.8 技术预览版
+定型日期   : 2026-08-20
+
+启动支持   :
+  - BIOS   : SeaBIOS + GRUB（multiboot1），内核经 Bochs VBE DISPI
+             从保护模式自编程切到 1024x768x32 线性帧缓冲（不依赖 GRUB
+             是否成功切图形模式）。
+  - UEFI   : OVMF + GRUB（multiboot1），由 GOP 提供 1024x768x32 帧缓冲。
+
+构建       :
+  make clean && make iso && make run        # BIOS（QEMU -vga std）
+  make clean && make iso && make run-uefi    # UEFI（QEMU OVMF）
+
+说明       :
+  本源码树为 SproutOS 官方「BIOS/UEFI 双启版」定型快照。开机横幅、
+  shell `ver` 命令、关于对话框均从 kernel.h 的 OS_EDITION / OS_RELEASE
+  宏取版本身份，改动版本只改 kernel.h 一处。

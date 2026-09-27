@@ -1,0 +1,38 @@
+# ===== 系统 / 编辑器临时文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+*.swp
+
+# ===== 日志与编译缓存 =====
+*.log
+__pycache__/
+*.pyc
+*.toc
+
+# ===== 构建产物（不入库）=====
+build/
+dist/
+iso/
+*.iso
+*.7z
+*.exe
+
+# ===== 磁盘镜像 =====
+disk.img
+*.img
+
+# ===== 本机/项目私有的工作目录与快照 =====
+.workbuddy/
+archive/
+release/
+Sprout BIOS-UEFI双启版/
+SproutOS.7z
+
+# ===== 开发预览截图（非源码，不入库）=====
+SproutOS/scripts/*preview.png
+SproutOS/scripts/old_layout.png
+SproutOS/scripts/side_by_side.png
+_create_repo.py

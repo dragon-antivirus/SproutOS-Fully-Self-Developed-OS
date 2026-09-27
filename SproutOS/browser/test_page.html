@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><title>Phase 1 标签测试页</title></head>
+<body style="color:#1A1A1A;">
+  <h1 style="color:#C0392B;">标题 H1（红）</h1>
+  <h3 style="color:#27AE60;">标题 H3（绿）</h3>
+
+  <p style="font-size:15px;">这是一段<b>加粗</b>、<i>斜体</i>、<u>下划线</u>与<small>小字</small>混排的中文 English 文本，用于验证自动换行与中英文对齐。</p>
+
+  <p>上标示例：E = mc<sup>2</sup> ；下标示例：H<sub>2</sub>O 。</p>
+
+  <div style="background-color:#EAF2FF; margin:16px; padding:10px; font-weight:bold; color:#3A7AFE;">
+    这是一个带背景色、外边距与加粗的 div 块。
+  </div>
+
+  <center><p style="color:#888888;">这是 center 居中的段落</p></center>
+
+  <blockquote style="color:#555555;">
+    引用块：脏数据容错测试 —— 这里故意不闭合这个 blockquote 看看解析器会不会崩。
+  <p>嵌套段落，缺少闭合标签，应被自动修复。</p>
+
+  <fieldset style="margin:16px;">
+    <legend style="font-weight:bold;">表单框 fieldset</legend>
+    <p style="font-size:14px;">fieldset 内文字，验证边框与缩进。</p>
+  </fieldset>
+
+  <ul>
+    <li>列表项一</li>
+    <li>列表项二（含<a href="/browser/home.html">返回主页的链接</a>）</li>
+    <li>列表项三</li>
+  </ul>
+
+  <p>图片测试（BMP，加载失败显示占位图）：</p>
+  <img src="/browser/test.bmp" />
+
+  <p>本地链接：<a href="/browser/home.html">回到主页</a> ｜ <a href="engine:2">选谷歌引擎</a></p>
+
+  <p style="line-height:28; font-size:13px; color:#999999;">
+    长文本行高测试：本行设置了 line-height=28 与较小字号，用于验证行高控制是否生效。SproutOS 浏览器 Phase 1 渲染引擎会尽量还原这些基础排版属性。
+  </p>
+</body>
+</html>
